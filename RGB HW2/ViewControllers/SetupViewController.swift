@@ -32,6 +32,8 @@ class SetupViewController: UIViewController, ColorMainViewProtocol {
     @IBOutlet var redTextField: UITextField!
     @IBOutlet var greenTextField: UITextField!
     @IBOutlet var blueTextField: UITextField!
+
+	@IBOutlet var doneButtonLabel: UIButton!
     
     // MARK: - Public property
     var colorFromMainView: UIColor!
@@ -52,8 +54,6 @@ class SetupViewController: UIViewController, ColorMainViewProtocol {
         
         setUI()
         setElementsValue()
-
-//        setColorRgbView()
     }
     
     // MARK: - Touches began
@@ -91,6 +91,7 @@ class SetupViewController: UIViewController, ColorMainViewProtocol {
         redSlider.minimumTrackTintColor = .red
         greenSlider.minimumTrackTintColor = .green
         setupView.layer.cornerRadius = 10
+		doneButtonLabel.layer.cornerRadius = 10
         
         addToolbarForTextField()
     }

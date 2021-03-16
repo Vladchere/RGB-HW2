@@ -1,23 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WRY-RT-2eT">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WRY-RT-2eT">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--RGB-->
         <scene sceneID="Nz4-sN-TKL">
             <objects>
                 <viewController id="t0n-VS-hYS" customClass="MainViewController" customModule="RGB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OMS-PF-olm">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="OWV-VI-yAv"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <edgeInsets key="layoutMargins" top="20" left="20" bottom="20" right="20"/>
                     </view>
-                    <navigationItem key="navigationItem" id="YFZ-VX-lLj">
+                    <navigationItem key="navigationItem" title="RGB" id="YFZ-VX-lLj">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.pencil" catalog="system" id="BJn-nr-cE0">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="presentation" identifier="showSettings" modalPresentationStyle="fullScreen" id="02t-C8-b6x"/>
@@ -37,18 +40,18 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SetupViewController" customModule="RGB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h8E-fK-A1u">
-                                <rect key="frame" x="16" y="30" width="288" height="100"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <rect key="frame" x="16" y="74" width="382" height="134.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="KJz-Dd-kBb"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZoW-0H-EH5">
-                                <rect key="frame" x="16" y="160" width="288" height="134"/>
+                                <rect key="frame" x="16" y="238.5" width="382" height="134"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="qdi-00-7V9">
                                         <rect key="frame" x="0.0" y="0.0" width="55" height="134"/>
@@ -103,22 +106,22 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="NhE-hy-2qf">
-                                        <rect key="frame" x="121" y="0.0" width="109" height="134"/>
+                                        <rect key="frame" x="121" y="0.0" width="203" height="134"/>
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="AJj-yO-u4M">
-                                                <rect key="frame" x="-2" y="0.0" width="113" height="35"/>
+                                                <rect key="frame" x="-2" y="0.0" width="207" height="35"/>
                                                 <connections>
                                                     <action selector="rgbSlidersAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="8Yw-ex-fCn"/>
                                                 </connections>
                                             </slider>
                                             <slider opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Exj-kP-30C">
-                                                <rect key="frame" x="-2" y="50" width="113" height="35"/>
+                                                <rect key="frame" x="-2" y="50" width="207" height="35"/>
                                                 <connections>
                                                     <action selector="rgbSlidersAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="oVf-iE-WYe"/>
                                                 </connections>
                                             </slider>
                                             <slider opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="IcM-YT-sAb">
-                                                <rect key="frame" x="-2" y="100" width="113" height="35"/>
+                                                <rect key="frame" x="-2" y="100" width="207" height="35"/>
                                                 <connections>
                                                     <action selector="rgbSlidersAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="I0n-9s-FR0"/>
                                                 </connections>
@@ -126,7 +129,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="q3R-yV-CKa">
-                                        <rect key="frame" x="238" y="0.0" width="50" height="134"/>
+                                        <rect key="frame" x="332" y="0.0" width="50" height="134"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ADy-IU-p3q">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="34"/>
@@ -150,10 +153,12 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FFR-DK-UuB">
-                                <rect key="frame" x="131" y="528" width="58" height="20"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FFR-DK-UuB">
+                                <rect key="frame" x="132" y="802" width="150" height="40"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="eKc-Lk-WVR"/>
+                                    <constraint firstAttribute="height" constant="40" id="eKc-Lk-WVR"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="vAU-yj-bAJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Done">
@@ -164,6 +169,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.0" green="0.2315706918761436" blue="0.62876157407407407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="h8E-fK-A1u" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="0zD-oE-VZi"/>
@@ -177,12 +183,12 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h8E-fK-A1u" secondAttribute="trailing" constant="16" id="iGQ-8n-Ttr"/>
                             <constraint firstItem="FFR-DK-UuB" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ZoW-0H-EH5" secondAttribute="bottom" constant="20" id="mFQ-h4-K5a"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="blueLabel" destination="grT-Ih-yAh" id="29u-9Z-UZM"/>
                         <outlet property="blueSlider" destination="IcM-YT-sAb" id="PX9-Xf-NNA"/>
                         <outlet property="blueTextField" destination="2dl-cz-u1m" id="rEx-e0-82e"/>
+                        <outlet property="doneButtonLabel" destination="FFR-DK-UuB" id="lBr-NA-Qco"/>
                         <outlet property="greenLabel" destination="U8w-Lb-RmO" id="l0u-TA-3KL"/>
                         <outlet property="greenSlider" destination="Exj-kP-30C" id="GUj-E2-oht"/>
                         <outlet property="greenTextField" destination="9fG-yX-nyc" id="YEL-rZ-OQg"/>
@@ -202,7 +208,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WRY-RT-2eT" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zaC-AG-I7Z">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -216,6 +222,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="square.and.pencil" catalog="system" width="128" height="118"/>
+        <image name="square.and.pencil" catalog="system" width="128" height="115"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
