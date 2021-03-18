@@ -17,7 +17,7 @@ protocol SetupViewControllerDelegate {
 }
 
 class SetupViewController: UIViewController, ColorMainViewProtocol {
-
+	
     // MARK: - IB Outlets
     @IBOutlet var setupView: UIView!
     
@@ -164,7 +164,7 @@ extension SetupViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         
         let textFieldText = textField.text ?? "0.00"
-        let textFieldFloat = Float(textFieldText) ?? 0.0
+		let textFieldFloat = Float(textFieldText.replacingOccurrences(of: ",", with: ".")) ?? 0.0
         
         if textField.text == "" {
             textField.text = "0.00"
@@ -181,14 +181,14 @@ extension SetupViewController: UITextFieldDelegate {
         
         switch textField.tag {
         case 0:
-            redSlider.value = Float(textField.text ?? "0.00") ?? 0.0
-            redLabel.text = textField.text
+            redSlider.value = textFieldFloat
+            redLabel.text = textFieldText.replacingOccurrences(of: ",", with: ".")
         case 1:
-            greenSlider.value = Float(textField.text ?? "0.00") ?? 0.0
-            greenLabel.text = textField.text
+            greenSlider.value = textFieldFloat
+            greenLabel.text = textFieldText.replacingOccurrences(of: ",", with: ".")
         case 2:
-            blueSlider.value = Float(textField.text ?? "0.00") ?? 0.0
-            blueLabel.text = textField.text
+            blueSlider.value = textFieldFloat
+            blueLabel.text = textFieldText.replacingOccurrences(of: ",", with: ".")
         default:
             break
         }
@@ -196,4 +196,3 @@ extension SetupViewController: UITextFieldDelegate {
         setColorView()
     }
 }
-
