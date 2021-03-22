@@ -47,7 +47,7 @@ class SetupViewController: UIViewController, ColorMainViewProtocol {
     // MARK: - Life Cycle Method
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         redTextField.delegate = self
         greenTextField.delegate = self
         blueTextField.delegate = self
@@ -113,10 +113,10 @@ class SetupViewController: UIViewController, ColorMainViewProtocol {
     }
     
     private func setColorView() {
-        setupView.backgroundColor = UIColor( red: CGFloat(redSlider.value),
-                                           green: CGFloat(greenSlider.value),
-                                           blue: CGFloat(blueSlider.value),
-                                           alpha: 1)
+        setupView.backgroundColor = UIColor(red: CGFloat(redSlider.value),
+											green: CGFloat(greenSlider.value),
+											blue: CGFloat(blueSlider.value),
+											alpha: 1)
     }
     
     private func sliderValueToString(for slider: UISlider) -> String {
